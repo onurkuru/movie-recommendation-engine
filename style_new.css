@@ -1,0 +1,691 @@
+* {
+    box-sizing: border-box;
+}
+#feed {
+    padding-bottom: 60px;
+}
+.content_list {
+    display: block;
+    margin: 0 auto;
+}
+#header {
+    height: auto!important;
+}
+@media screen and (max-width: 1185px) {
+    #header .mmenu {
+        display: inline-block;
+    }
+    #header #nav {
+        display: none;
+    }
+}
+/* Genre Selection */
+
+@media screen and (min-width: 1171px) {
+    a.genre_box {
+        margin: 0 5px 5px 0;
+        width: 300px;
+        position: relative;
+        float: left;
+    }
+    a.genre_box:nth-child(4n) {
+        margin: 0 0 5px 0;
+    }
+    .genre_box .rectangle {
+        width: 300px;
+        height: 300px;
+        opacity: 0.7;
+        background-color: #000000;
+    }
+}
+@media screen and (max-width: 1170px) and (min-width: 769px) {
+    a.genre_box {
+        width: 33%;
+        position: relative;
+        float: left;
+        margin: 0 2px 5px 0;
+    }
+    .genre_box .rectangle {
+        width: 100%;
+        height: 300px;
+        opacity: 0.7;
+        background-color: #000000;
+    }
+    a.genre_box:nth-child(3n) {
+        margin: 0 0 5px 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    a.genre_box {
+        width: 49%;
+        position: relative;
+        float: left;
+        margin: 0 5px 5px 0;
+    }
+    .genre_box .rectangle {
+        width: 100%;
+        height: 300px;
+        opacity: 0.7;
+        background-color: #000000;
+    }
+    a.genre_box:nth-child(2n) {
+        margin: 0 0 5px 0;
+    }
+}
+.komedi {
+    background: url(img/komedi.jpg) top center no-repeat;
+    background-size: cover;
+}
+.macera {
+    background: url(img/macera.jpg) top center no-repeat;
+    background-size: cover;
+}
+.aksiyon {
+    background: url(img/aksiyon.jpg) top center no-repeat;
+    background-size: cover;
+}
+.bilim_kurgu {
+    background: url(img/bilim_kurgu.jpg) top center no-repeat;
+    background-size: cover;
+}
+.romantik {
+    background: url(img/romantik.jpg) top center no-repeat;
+    background-size: cover;
+}
+.korku {
+    background: url(img/korku.jpg) top center no-repeat;
+    background-size: cover;
+}
+.animasyon {
+    background: url(img/animasyon.jpg) top center no-repeat;
+    background-size: cover;
+}
+.suc {
+    background: url(img/suc.jpg) top center no-repeat;
+    background-size: cover;
+}
+.tarih {
+    background: url(img/tarih.jpg) top center no-repeat;
+    background-size: cover;
+}
+.dram {
+    background: url(img/dram.jpg) top center no-repeat;
+    background-size: cover;
+}
+.belgesel {
+    background: url(img/belgesel.jpg) top center no-repeat;
+    background-size: cover;
+}
+.western {
+    background: url(img/western.jpg) top center no-repeat;
+    background-size: cover;
+}
+.genre_box .icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    text-align: center;
+}
+.genre_box .genre_title {
+    padding: 15px;
+    width: 100%;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+    box-sizing: border-box;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    z-index: 8;
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+}
+.genre_id {
+    display: none;
+}
+/* Movie List Part */
+
+@media screen and (min-width: 1171px) {
+    a.movie_box {
+        width: 16.667%;
+        padding: 10px;
+        float: left;
+        position: relative;
+    }
+}
+@media screen and (max-width: 1170px) and (min-width: 769px) {
+    a.movie_box {
+        width: 20%;
+        padding: 10px;
+        float: left;
+        position: relative;
+    }
+}
+@media screen and (max-width: 768px) {
+    a.movie_box {
+        width: 50%;
+        padding: 10px;
+        float: left;
+        position: relative;
+    }
+}
+.movie_box img {
+    width: 100%;
+}
+.movie_box .oval {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    background: #AE9854;
+    border-radius: 30px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 36px;
+    color: #FFF;
+}
+.movie_box .movie_title {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    margin: 5px 0 5px 0;
+    height: 36px;
+}
+/*  Banner Alanı */
+/* Shared */
+
+.loginBtn {
+    box-sizing: border-box;
+    position: relative;
+    width: 14em; 
+    
+    margin: 0.2em;
+    padding: 0 15px 0 46px;
+    border: none;
+    text-align: left;
+    line-height: 30px;
+    white-space: nowrap;
+    border-radius: 0.2em;
+    font-size: 12px;
+    color: #FFF;
+}
+.loginBtn:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 100%;
+}
+.loginBtn:focus {
+    outline: none;
+}
+.loginBtn:active {
+    box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
+}
+/* Facebook */
+
+.loginBtn--facebook {
+    background: #fd7d00;
+    background: linear-gradient(to bottom, #fd7d00 0, #f25c00 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fd7d00', endColorstr='#f25c00', GradientType=0);
+    border: 1px solid #ED3F00;
+    color: #fff;
+    text-shadow: 0 -1px 0 #354C8C;
+    display: block;
+    margin: 0 auto;
+}
+.loginBtn--facebook:before {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+    background: #f25c00;
+    background: linear-gradient(to bottom, #f25c00 0, #f25c00 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f25c00', endColorstr='#f25c00', GradientType=0);
+}
+.relative {
+    position: relative;
+    width: 100%;
+    height: 76px;
+}
+.relative h1 {
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.pb-bg {
+    background: url(img/banner.jpg) center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.profile-banner {
+    background: #292929;
+    position: relative;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    color: #fff;
+}
+/* Movie Detail */
+
+
+.movie_bg {
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('https://image.tmdb.org/t/p/w1400_and_h450_bestv2/lubzBMQLLmG88CLQ4F3TxZr2Q7N.jpg');
+}
+.movie_bg:before {
+    content: '';
+    position: absolute;
+    height: 300px;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.71);
+}
+.container_detail {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding-top: 60px;
+}
+.movie_row {
+    max-width: 1215px;
+    height: 300px;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.poster img {
+    width: 100%;
+}
+.point {
+    vertical-align: middle;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-right: 22px;
+}
+.point i {
+    float: left;
+    color: #f8e81c;
+    font-size: 26px;
+}
+
+.point .score {
+    margin-left: 10px;
+    width: 55px;
+    display: inline-block;
+    background-color: #f8e81c;
+    vertical-align: middle;
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    margin-right: 22px;
+}
+.watchlist {
+        clear: left;
+}
+.watchlist img{
+        float: left;
+        margin-right: 10px;
+}
+.watchlist,
+.comment {
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    float: left;
+    margin-top: 25px;
+    color: #f8e81c;
+    cursor: pointer;
+}
+.watchlist > i,
+.comment > i {
+    padding: 9px;
+    border: 0.5px solid #f8e81c;
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.content {
+    margin-bottom: 30px;
+}
+.comment {
+    margin-left: 25px;
+}
+.starpoint {
+    float: left;
+}
+.starpoint span {
+    float: left;
+    line-height: 30px;
+    margin-right: 5px;
+}
+.multi_assets {
+    position: relative;
+    text-align: left;
+    float: left;
+}
+.movie_detail_row {
+    max-width: 1215px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+}
+
+.rightside > .breadcrumb {
+    font-size: 14px;
+    color: black;
+    position: relative;
+    bottom: 20px;
+}
+
+.rightside > .breadcrumb > a{
+    color: black;
+}
+
+/* Desktop Tarafı */
+@media only screen and (max-width: 768px) {
+ #header #search {
+    width: 100px!important;
+}
+.leftside {
+    width: 100%;
+    padding: 10px;
+    padding-top: 10px;
+}
+.rightside {
+    width: 100%;
+    padding: 10px;
+
+}
+.multi_tools {
+    float: left;
+    position: absolute;
+    top: 10%;
+    margin: 0 auto;
+}
+.multi_tools .title {
+    font-size: 22px;
+    margin-bottom: 0px;
+    line-height: 26px;
+}
+.poster {
+    width: 136px;
+    float: left;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.multi_assets {
+    width: 50%;
+}
+.point i {
+    display: none;
+    margin-bottom: 10px;
+}
+.starpoint span {
+    display: none;
+}
+.starpoint {
+    clear: left;
+    margin-top: 10px;
+}
+.point .score{
+    margin-left: 0px;
+}
+.watchlist > i,
+.comment > i {
+    padding: 9px;
+    border: 0.5px solid #000;
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.point i {
+    float: left;
+    color: #000;
+    font-size: 26px;
+}
+.rating > label:before {
+    margin: 2px;
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.watchlist,
+.comment {
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    float: left;
+    margin-top: 0px;
+    color: #000;
+}
+.watchlist{
+    margin-top: 15px;
+}
+.comment {
+    margin-left: 0px;
+}
+
+.rightside #cplayer-container1 {
+/*   display: none; */
+}
+.leftside div:last-child{
+ /*   display: none; */
+ clear: left;
+ padding-top: 20px;
+}
+.cast_title {
+    margin: 0px 0 0 10px;
+}
+.casts div:last-child{
+    clear: left;
+}
+.content{
+    clear: left;
+    padding-top: 15px;
+}
+.movie_detail_row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-top: 80px;
+}
+.movie_bg:before, .movie_bg, .movie_row {
+    height: 250px;
+}
+.movie_detail_row>div:nth-of-type(1) { order: 2; }
+.movie_detail_row>div:nth-of-type(2) { order: 1; }
+.movie_detail_row>div:nth-of-type(3) { order: 3; }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+.leftside {
+    float: left;
+    width: 16%;
+    margin-right: 60px;
+    padding-top: 40px;
+}
+.leftside div:last-child{
+    display: block;
+    float: left;
+    margin-top: 30px;
+}
+
+.rightside {
+    width: 70%;
+    position: relative;
+    text-align: left;
+    float: left;
+    padding-bottom: 60px;
+}
+.multi_tools {
+    float: left;
+    position: absolute;
+    top: 10%;
+    margin: 0 auto;
+}
+.multi_tools .title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+.poster {
+    width: 200px;
+    float: left;
+    margin-right: 60px;
+}
+
+
+}
+.genre_tag {
+  width: 64px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #f8e71c;
+  text-align: center;
+  line-height: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  float: left;
+  margin: 2px;
+
+}
+
+.rating {
+    border: none;
+    float: left;
+}
+.rating > input {
+    display: none;
+}
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label,
+/* show gold star when clicked */
+
+.rating:not(:checked) > label:hover,
+/* hover current star */
+
+.rating:not(:checked) > label:hover ~ label {
+    color: #FFD700;
+}
+/* hover previous stars in list */
+
+.rating > input:checked + label:hover,
+/* hover current star when changing rating */
+
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+/* lighten current selection */
+
+.rating > input:checked ~ label:hover ~ label {
+    color: #FFED85;
+}
+
+
+
+
+
+/* Cast Bölümü **/
+.casts {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.cast {
+    float: left;
+    font-size: 14px;
+    width: 33%
+}
+.cast img {
+    clip-path: circle(40% at center);
+    float: left;
+    width: 80px;
+}
+.cast_title {
+    float: left;
+    margin: 15px 0 0 10px;
+}
+.img_cast {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+}
+
+/* Comment Box */
+.comment_box {
+    width: 100%;
+    clear: left;
+} 
+
